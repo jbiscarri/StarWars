@@ -10,8 +10,9 @@
 
 #import "AGTStarWarsCharacter.h"
 #import "CafPLayer.h"
+#import "AGTUniverseTableViewController.h"
 
-@interface AGTCharacterViewController : UIViewController<UISplitViewControllerDelegate>
+@interface AGTCharacterViewController : UIViewController<UISplitViewControllerDelegate, AGTUniverseTableViewControllerDelegate>
 
 @property (nonatomic, strong) CafPlayer *player;
 @property (nonatomic, strong) AGTStarWarsCharacter *model;

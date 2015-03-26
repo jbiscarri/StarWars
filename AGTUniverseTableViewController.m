@@ -120,13 +120,23 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         character = [self.model rebelAtIndex:indexPath.row];
     }
     
-    // Crear el controlador de character
-    AGTCharacterViewController *charVC = [[AGTCharacterViewController alloc] initWithModel:character];
     
-    // push
-    [self.navigationController pushViewController:charVC
-                                         animated:YES];
+    // Avisar al delegado (siempre y cuando entienda
+    // el mensaje)
+    if ([self.delegate respondsToSelector:@selector(universeTableViewController:didSelectCharacter:)]) {
+        
+        // te lo mando
+        [self.delegate universeTableViewController:self
+                                didSelectCharacter:character];
+    }
+    
+    
 }
+
+
+
+
+
 
 @end
 
