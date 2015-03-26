@@ -12,6 +12,7 @@
 #import "AGTCharacterViewController.h"
 #import "AGTWikiViewController.h"
 #import "AGTStarWarsUniverse.h"
+#import "AGTUniverseTableViewController.h"
 
 @implementation AppDelegate
 
@@ -33,13 +34,17 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     AGTStarWarsUniverse *universe = [AGTStarWarsUniverse new];
     
     // Creamos un controlador
+    AGTUniverseTableViewController *uVC = [[AGTUniverseTableViewController alloc] initWithModel:universe style:UITableViewStylePlain];
     
     
     
     // Creo el combinador
+    UINavigationController *nav = [UINavigationController new];
+    [nav pushViewController:uVC
+                   animated:NO];
     
     
-    //self.window.rootViewController = tabVC;
+    self.window.rootViewController = nav;
     
     
     // La mostramos

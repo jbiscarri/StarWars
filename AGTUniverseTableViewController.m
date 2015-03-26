@@ -7,6 +7,7 @@
 //
 
 #import "AGTUniverseTableViewController.h"
+#import "AGTCharacterViewController.h"
 
 @interface AGTUniverseTableViewController ()
 
@@ -19,6 +20,7 @@
     
     if (self = [super initWithStyle:style]) {
         _model = model;
+        self.title = @"StarWars Universe";
     }
     return self;
 }
@@ -93,6 +95,38 @@
     
 }
 
+
+-(NSString*) tableView:(UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section{
+    
+    if (section == IMPERIAL_SECTION) {
+        return @"Imperials";
+    }else{
+        return @"Rebels";
+    }
+}
+
+
+#pragma mark - Delegate
+-(void) tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    // Averiguar de qué modelo(personaje) me están hablando
+    // Deberes: -(AGTStarWarsCharacter *) characteratIndexPath:(NSIndexPath*)
+    AGTStarWarsCharacter *character;
+    if (indexPath.section == IMPERIAL_SECTION) {
+        character = [self.model imperialAtIndex:indexPath.row];
+    }else{
+        character = [self.model rebelAtIndex:indexPath.row];
+    }
+    
+    // Crear el controlador de character
+    AGTCharacterViewController *charVC = [[AGTCharacterViewController alloc] initWithModel:character];
+    
+    // push
+    [self.navigationController pushViewController:charVC
+                                         animated:YES];
+}
 
 @end
 

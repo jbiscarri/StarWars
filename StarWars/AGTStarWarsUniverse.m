@@ -48,7 +48,7 @@
         NSURL *tarkinURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Grand_Moff_Tarkin"];
         
         NSData *tarkinSound = [NSData dataWithContentsOfURL:[b URLForResource:@"tarkin" withExtension:@"caf"]];
-        UIImage *tarkinImage = [UIImage imageNamed:@"darthVader.jpg"];
+        UIImage *tarkinImage = [UIImage imageNamed:@"tarkin.jpg"];
         
         AGTStarWarsCharacter *tarkin = [[AGTStarWarsCharacter alloc]
                                         initWithName:@"Wilhuf Tarkin"
