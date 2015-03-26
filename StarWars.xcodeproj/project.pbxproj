@@ -35,6 +35,7 @@
 		ED13EDB41AC34E5A00A92CCF /* AGTWikiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED13EDB21AC34E5A00A92CCF /* AGTWikiViewController.m */; };
 		ED13EDB51AC34E5A00A92CCF /* AGTWikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED13EDB31AC34E5A00A92CCF /* AGTWikiViewController.xib */; };
 		ED13EDB81AC376B600A92CCF /* AGTStarWarsUniverse.m in Sources */ = {isa = PBXBuildFile; fileRef = ED13EDB71AC376B600A92CCF /* AGTStarWarsUniverse.m */; };
+		ED13EDBB1AC4997C00A92CCF /* AGTUniverseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED13EDBA1AC4997C00A92CCF /* AGTUniverseTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		ED13EDB31AC34E5A00A92CCF /* AGTWikiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTWikiViewController.xib; sourceTree = "<group>"; };
 		ED13EDB61AC376B600A92CCF /* AGTStarWarsUniverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTStarWarsUniverse.h; sourceTree = "<group>"; };
 		ED13EDB71AC376B600A92CCF /* AGTStarWarsUniverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTStarWarsUniverse.m; sourceTree = "<group>"; };
+		ED13EDB91AC4997C00A92CCF /* AGTUniverseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTUniverseTableViewController.h; sourceTree = "<group>"; };
+		ED13EDBA1AC4997C00A92CCF /* AGTUniverseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTUniverseTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +189,8 @@
 				ED13EDB11AC34E5A00A92CCF /* AGTWikiViewController.h */,
 				ED13EDB21AC34E5A00A92CCF /* AGTWikiViewController.m */,
 				ED13EDB31AC34E5A00A92CCF /* AGTWikiViewController.xib */,
+				ED13EDB91AC4997C00A92CCF /* AGTUniverseTableViewController.h */,
+				ED13EDBA1AC4997C00A92CCF /* AGTUniverseTableViewController.m */,
 			);
 			name = Controllers;
 			path = ..;
@@ -346,6 +351,7 @@
 				ED13EDAF1AC346F900A92CCF /* CafPlayer.m in Sources */,
 				ED13EDB41AC34E5A00A92CCF /* AGTWikiViewController.m in Sources */,
 				ED13ED5F1AC203FC00A92CCF /* main.m in Sources */,
+				ED13EDBB1AC4997C00A92CCF /* AGTUniverseTableViewController.m in Sources */,
 				ED13ED891AC21A4F00A92CCF /* AGTCharacterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +537,7 @@
 				ED13ED7E1AC203FC00A92CCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED13ED7F1AC203FC00A92CCF /* Build configuration list for PBXNativeTarget "StarWarsTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +546,7 @@
 				ED13ED811AC203FC00A92CCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
