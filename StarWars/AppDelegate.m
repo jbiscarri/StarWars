@@ -13,6 +13,7 @@
 #import "AGTWikiViewController.h"
 #import "AGTStarWarsUniverse.h"
 #import "AGTUniverseTableViewController.h"
+#import "Settings.h"
 
 @implementation AppDelegate
 
@@ -20,6 +21,18 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    // Valor por defecto para último personaje seleccionado
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    if (![def objectForKey:LAST_SELECTED_CHARACTER]) {
+        
+        // guardamos un valor por defecto
+        [def setObject:@[@(IMPERIAL_SECTION), @0]
+                forKey:LAST_SELECTED_CHARACTER];
+        
+        // Por si acaso...
+        [def synchronize];
+        
+    }
     
     
     // Creamos una vista de tipo UIWindow
@@ -85,7 +98,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Creamos los controladores
     AGTUniverseTableViewController *uVC = [[AGTUniverseTableViewController alloc] initWithModel:universe style:UITableViewStylePlain];
     
-    AGTCharacterViewController *charVC = [[AGTCharacterViewController alloc] initWithModel:[universe imperialAtIndex:0]];
+    AGTCharacterViewController *charVC = [[AGTCharacterViewController alloc] initWithModel:[self lastSelectedCharacterInModel:universe]];
     
     // Creamos los navigationControllers
     UINavigationController *uNav = [UINavigationController new];
@@ -127,7 +140,27 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 }
 
 
-
+-(AGTStarWarsCharacter*)lastSelectedCharacterInModel:(AGTStarWarsUniverse*)u{
+    
+    // Obtengo el NSUserDefaults
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    
+    // Saco las coordenadas del último personaje
+    NSArray *coords = [def objectForKey:LAST_SELECTED_CHARACTER];
+    NSUInteger section = [[coords objectAtIndex:0] integerValue];
+    NSUInteger pos = [[coords objectAtIndex:1] integerValue];
+    
+    // Obtengo el personaje
+    AGTStarWarsCharacter *character;
+    if (section == IMPERIAL_SECTION) {
+        character = [u imperialAtIndex:pos];
+    }else{
+        character = [u rebelAtIndex:pos];
+    }
+    
+    // Lo devuelvo
+    return character;
+}
 
 
 

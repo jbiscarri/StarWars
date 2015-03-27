@@ -89,6 +89,7 @@
 		ED13EDB71AC376B600A92CCF /* AGTStarWarsUniverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTStarWarsUniverse.m; sourceTree = "<group>"; };
 		ED13EDB91AC4997C00A92CCF /* AGTUniverseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTUniverseTableViewController.h; sourceTree = "<group>"; };
 		ED13EDBA1AC4997C00A92CCF /* AGTUniverseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTUniverseTableViewController.m; sourceTree = "<group>"; };
+		EDADF6891AC60E5600A29005 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +140,7 @@
 				ED13ED691AC203FC00A92CCF /* Images.xcassets */,
 				ED13ED6B1AC203FC00A92CCF /* LaunchScreen.xib */,
 				ED13ED5C1AC203FC00A92CCF /* Supporting Files */,
+				EDADF6891AC60E5600A29005 /* Settings.h */,
 			);
 			path = StarWars;
 			sourceTree = "<group>";

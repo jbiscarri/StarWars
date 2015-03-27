@@ -9,6 +9,7 @@
 #import "AGTUniverseTableViewController.h"
 #import "AGTCharacterViewController.h"
 #import "AGTStarWarsUniverse.h"
+#import "Settings.h"
 
 @interface AGTUniverseTableViewController ()
 
@@ -141,6 +142,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
                          userInfo:dict];
     
     [nc postNotification:n];
+    
+    
+    // Guardamos las coordenadas del último personaje
+    NSArray *coords = @[@(indexPath.section), @(indexPath.row)];
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    [def setObject:coords
+            forKey:LAST_SELECTED_CHARACTER];
+    [def synchronize];
     
 }
 
