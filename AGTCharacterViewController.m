@@ -36,7 +36,8 @@
     // Sincronizar modelo -> vista
     [self syncViewWithModel];
     
-    
+    // Si estoy dentro de un SplitVC me pongo el botón
+    self.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
 }
 
 #pragma mark - Memory
