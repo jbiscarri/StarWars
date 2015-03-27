@@ -9,9 +9,13 @@
 #define IMPERIAL_SECTION 0
 #define REBEL_SECTION 1
 
-#import <UIKit/UIKit.h>
-#import "AGTStarWarsUniverse.h"
+#define CHARACTER_DID_CHANGE_NOTIFICATION_NAME @"characterDidChangeNotification"
+#define CHARACTER_KEY @"characterKey"
 
+@import UIKit;
+
+@class AGTStarWarsUniverse;
+@class AGTStarWarsCharacter;
 @class AGTUniverseTableViewController;
 
 @protocol AGTUniverseTableViewControllerDelegate <NSObject>
